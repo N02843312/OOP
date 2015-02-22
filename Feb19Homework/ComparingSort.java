@@ -13,18 +13,18 @@ public class ComparingSort
 		{
 			Scanner inFile = new Scanner(new File("textfile.txt"));
 			while(inFile.hasNextLine())
-            {
-                String lineText = inFile.nextLine();
-                
-                String dob = lineText.substring(0, lineText.indexOf(", "));    //get dob from string
-                lineText = lineText.substring(lineText.indexOf(" ") + 1, lineText.length());  //chop off dob and first comma
-                String name = lineText.substring(0, lineText.indexOf(", "));  //get name from string
-                lineText = lineText.substring(lineText.indexOf(",") + 2, lineText.length());  //chop off name and final comma (leaving just the int)
-                int id = Integer.parseInt(lineText);    //convert string to int
-
-                Student s = new Student(id, dob, name); 
-                al.add(s);
-            }
+            		{
+		                String lineText = inFile.nextLine();
+		                
+		                String dob = lineText.substring(0, lineText.indexOf(", "));    //get dob from string
+		                lineText = lineText.substring(lineText.indexOf(" ") + 1, lineText.length());  //chop off dob and first comma
+		                String name = lineText.substring(0, lineText.indexOf(", "));  //get name from string
+		                lineText = lineText.substring(lineText.indexOf(",") + 2, lineText.length());  //chop off name and final comma (leaving just the int)
+		                int id = Integer.parseInt(lineText);    //convert string to int
+		
+		                Student s = new Student(id, dob, name); 
+		                al.add(s);
+            		}
 		}
 		catch(IOException e)
 		{
